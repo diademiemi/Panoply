@@ -16,11 +16,15 @@ def web_data():
 
 
 def local_data():
-    allData["date_hhmm"] = date.getTime()
+    allData["time"] = date.getTime()
+    allData["date"] = date.getDate()
     threading.Timer(config.LOCAL_REFRESH_INTERVAL, local_data).start()
 
 
 def getTime():
-    return allData["date_hhmm"]
+    return allData["time"]
+def getDate():
+    return allData["date"]
+
 def getTemp():
     return allData["temp"]
