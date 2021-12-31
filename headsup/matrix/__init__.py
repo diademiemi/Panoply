@@ -1,9 +1,7 @@
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
 def init():
-
     global device
-    
     # Configure Matrix
     options = RGBMatrixOptions()
     options.rows = 64 # Put your display height here
