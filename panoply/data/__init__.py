@@ -18,9 +18,6 @@ def web_data():
 def local_data():
     if config.COMMAND_PLACEHOLDERS:
         for key, value in config.COMMAND_PLACEHOLDERS.items():
-            print(key)
-            print(value)
-            print(command.getOutput(value))
             allData[key] = command.getOutput(value)
     threading.Timer(config.LOCAL_REFRESH_INTERVAL, local_data).start()
 
