@@ -3,7 +3,8 @@ import config
 
 import threading
 
-allData = {}
+placeholders = {}
+colors = {}
 
 def start():
     web_data()
@@ -12,14 +13,20 @@ def start():
 def web_data():
     if config.HOME_ASSISTANT_STATE_PLACEHOLDERS:
         for key, value in config.HOME_ASSISTANT_STATE_PLACEHOLDERS.items():
-            allData[key] = homeassistant.getState(value)
+            placeholders[key] = homeassistant.getState(value)
+    if config.HOME_ASSISTANT_COLOURS:
+        for key, value in config.HOME_ASSISTANT_COLOURS.items():
+            colors[key] = homeassistant.getColor(value)
     threading.Timer(config.WEB_REFRESH_INTERVAL, web_data).start()
 
 def local_data():
     if config.COMMAND_PLACEHOLDERS:
         for key, value in config.COMMAND_PLACEHOLDERS.items():
-            allData[key] = command.getOutput(value)
+            placeholders[key] = command.getOutput(value)
     threading.Timer(config.LOCAL_REFRESH_INTERVAL, local_data).start()
 
-def getData():
-    return allData
+def getPlaceholders():
+    return placeholders
+
+def getColors():
+    return colors

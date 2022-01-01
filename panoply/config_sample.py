@@ -40,6 +40,16 @@ HOME_ASSISTANT_STATE_PLACEHOLDERS = {
     'phonebattery' : 'sensor.phone_battery_level'
 }
 
+# Colors that are retrieved from a Home Assistant lightbulb
+# These can be used instead of the usual tuple:
+# 'text definition' : (<x position>, <y position>, 'bulbs')
+# Leave blank to disable entirely
+# These are refreshed according to WEB_REFRESH_INTERVAL
+# '<new color name>' : '<home assistant entity>' 
+HOME_ASSISTANT_COLOURS = {
+    'bulbs' : 'light.bulbs'
+}
+
 # Layout settings
 # Here you can customise the location and content of text elements or place shapes
 
@@ -49,21 +59,21 @@ HOME_ASSISTANT_STATE_PLACEHOLDERS = {
 # And any entities defined from Home Assistant
 
 # Large text, using the PixeloidMono font
-# '<text %placeholder%>' : (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
+# '<text %placeholder%>' : (<x position bottom-left>, <y position bottom-left>, (<red>, <green>, <blue>))
 LARGE_TEXT_ELEMENTS = {
     '%time%' : (2, 9, (200, 200, 200)),
     '%temp%' : (2, 38, (200, 200, 200))
 }
 
 # Small text, using the 5x7 font
-# '<text %placeholder%>' : (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
+# '<text %placeholder%>' : (<x position bottom-left>, <y position bottom-left>, (<red>, <green>, <blue>))
 SMALL_TEXT_ELEMENTS = {
     '%date%' : (2, 18, (200, 200, 200)),
     'it is' : (2, 30, (200, 200, 200))
 }
 
 # Tiny text, using the 4x6 font
-# '<text %placeholder%>' : (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
+# '<text %placeholder%>' : (<x position bottom-left>, <y position bottom-left>, (<red>, <green>, <blue>))
 TINY_TEXT_ELEMENTS = {
     'c' : (27, 38, (200, 200, 200)),
     'Hello, world!' : (2, 56, (200, 200, 200))
@@ -87,3 +97,7 @@ RECTANGLES = [
     (0, 0, 64, 64, (0, 200, 0)),
     (1, 23, 32, 16, (200, 0, 200))
 ]
+
+# Place from a list of available symbols
+# 
+SYMBOLS = []
