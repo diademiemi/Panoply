@@ -1,18 +1,30 @@
 # How often the display refreshes
 DISPLAY_REFRESH_RATE = 0.25
-
 # How often information on the device is polled (Date, time)
 LOCAL_REFRESH_INTERVAL = 0.5
 # How often information over web requests is polled (Home Assistant)
 WEB_REFRESH_INTERVAL = 30
+
+# Put your display resolution here
+DISPLAY_WIDTH = 64
+DISPLAY_HEIGHT = 64
+# If you need any rotation, specify this as a multiple of 90, otherwise leave it at 0
+DISPLAY_ROTATION = 0
+# Display mapping, read https://github.com/hzeller/rpi-rgb-led-matrix#changing-parameters-via-command-line-flags
+DISPLAY_HARDWARE_MAPPING = "adafruit-hat"
 
 # Format used for %time%
 TIME_FORMAT = "%H:%M:%S"
 # Format used for %date%
 DATE_FORMAT = "%Y-%m-%d"
 
+# Path to font files, NEEDS TO BE "BDF" bitmap fonts!
+TINY_FONT = "../fonts/Tiny-4x6.bdf"
+SMALL_FONT = "../fonts/Small-5x7.bdf"
+LARGE_FONT = "../fonts/PixeloidMono.bdf"
+
 # URL of your Home Assistant instance
-HOME_ASSISTANT_URL = "https://example.com"
+HOME_ASSISTANT_URL = "https://home.example.com"
 # Long-lived access token
 HOME_ASSISTANT_KEY = "ABCDEF"
 
@@ -22,13 +34,14 @@ HOME_ASSISTANT_ENTITY_STATES = {
     'temp' : 'sensor.room_temperature',
     'phonebattery' : 'sensor.phone_battery_level'
 }
+
 # Layout settings
 # Here you can customise the location and content of text elements or place shapes
 
 # AVAILABLE TEXT PLACEHOLDERS:
 # %time% - Replaced with the current time
 # %date% - Replaced with the current date
-# %temp% - Replaced with the temperature polled from Home Assistant
+# And any entities defined from Home Assistant
 
 # Large text, using the PixeloidMono font
 # '<text %placeholder%>' : (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))

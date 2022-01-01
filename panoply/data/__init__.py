@@ -1,8 +1,7 @@
-import threading
 from data.sources import date, homeassistant
 import config
 
-global allData
+import threading
 
 allData = {}
 
@@ -16,7 +15,6 @@ def web_data():
             allData[key] = homeassistant.getState(value)
     threading.Timer(config.WEB_REFRESH_INTERVAL, web_data).start()
 
-
 def local_data():
     allData["time"] = date.getTime()
     allData["date"] = date.getDate()
@@ -24,10 +22,3 @@ def local_data():
 
 def getData():
     return allData
-
-def getTime():
-    return allData["time"]
-def getDate():
-    return allData["date"]
-def getTemp():
-    return allData["temp"]

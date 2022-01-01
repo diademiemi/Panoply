@@ -12,37 +12,46 @@ def test():
         while True:
             offscreen_canvas = matrix.device.CreateFrameCanvas()
 
+            # Loop for every horizontal line in list
             for hline in config.HORIZONTAL_LINES:
                 offscreen_canvas = shape.horizontalLine(offscreen_canvas, hline[0], hline[1], hline[2], hline[3])
 
+            # Loop for every vertical line in list
             for vline in config.VERTICAL_LINES:
                 offscreen_canvas = shape.verticalLine(offscreen_canvas, vline[0], vline[1], vline[2], vline[3])
 
+            # Loop for every rectangle in list
             for rectangle in config.RECTANGLES:
                 offscreen_canvas = shape.rectangle(offscreen_canvas, rectangle[0], rectangle[1], rectangle[2], rectangle[3], rectangle[4])
 
+            # Loop for every text in list
             for textentity, values in config.LARGE_TEXT_ELEMENTS.items():
                 textresult = textentity
+                # Attempt to replace placeholders
                 for dataname, dataresult in data.getData().items():
                     if "%{}%".format(dataname) in textresult:
                         textresult = textresult.replace("%{}%".format(dataname), dataresult)
-
+                # Add message to display
                 offscreen_canvas = text.largeFont(offscreen_canvas, values[0], values[1], values[2], textresult)
 
+            # Loop for every text in list
             for textentity, values in config.SMALL_TEXT_ELEMENTS.items():
                 textresult = textentity
+                    # Attempt to replace placeholders
                 for dataname, dataresult in data.getData().items():
                     if "%{}%".format(dataname) in textresult:
                         textresult = textresult.replace("%{}%".format(dataname), dataresult)
-
+                # Add message to display
                 offscreen_canvas = text.smallFont(offscreen_canvas, values[0], values[1], values[2], textresult)
 
+            # Loop for every text in list
             for textentity, values in config.TINY_TEXT_ELEMENTS.items():
                 textresult = textentity
+                    # Attempt to replace placeholders
                 for dataname, dataresult in data.getData().items():
                     if "%{}%".format(dataname) in textresult:
                         textresult = textresult.replace("%{}%".format(dataname), dataresult)
-
+                # Add message to display
                 offscreen_canvas = text.tinyFont(offscreen_canvas, values[0], values[1], values[2], textresult)
 
             time.sleep(config.DISPLAY_REFRESH_RATE)
@@ -50,3 +59,4 @@ def test():
     except KeyboardInterrupt:
         print("Stopping...")
         sys.exit(0)
+        

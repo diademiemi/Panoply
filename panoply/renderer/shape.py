@@ -1,14 +1,29 @@
+# canvas    - canvas to modify
+# x         - x starting coordinate
+# y         - y starting coordinate
+# len       - length of the line
+# color     - tuple of RGB colours
+
 def verticalLine(canvas, x, y, len, color):
+    # Draw pixel for every pixel in length
     for i in range(len):
         canvas.SetPixel(x, y + i, color[0], color[1], color[2])
     
     return canvas
 
 def horizontalLine(canvas, x, y, len, color):
+    # Draw pixel for every pixel in length
     for i in range(len):
         canvas.SetPixel(x + i, y, color[0], color[1], color[2])
     
     return canvas
+
+# canvas    - canvas to modify
+# x         - x starting coordinate
+# y         - y starting coordinate
+# lenx      - rectangle width
+# leny      - rectangle height
+# color     - tuple of RGB colours
 
 def rectangle(canvas, x, y, lenx, leny, color):
     # Top x line

@@ -10,3 +10,4 @@ def getDate():
     now = datetime.now()
     
     return now.strftime(config.DATE_FORMAT)
+    
