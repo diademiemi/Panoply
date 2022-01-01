@@ -13,24 +13,29 @@ DISPLAY_ROTATION = 0
 # Display mapping, read https://github.com/hzeller/rpi-rgb-led-matrix#changing-parameters-via-command-line-flags
 DISPLAY_HARDWARE_MAPPING = "adafruit-hat"
 
-# Format used for %time%
-TIME_FORMAT = "%H:%M:%S"
-# Format used for %date%
-DATE_FORMAT = "%Y-%m-%d"
-
 # Path to font files, NEEDS TO BE "BDF" bitmap fonts!
 TINY_FONT = "../fonts/Tiny-4x6.bdf"
 SMALL_FONT = "../fonts/Small-5x7.bdf"
 LARGE_FONT = "../fonts/PixeloidMono.bdf"
+
+# This defines placeholders which are retrieved from shell commands
+# These are refreshed according to LOCAL_REFRESH_INTERVAL
+# '<new placeholder name>' : '<shell command>'
+COMMAND_PLACEHOLDERS = {
+    'time' : 'date +"%H:%M:%S"',
+    'date' : 'date +"%Y-%m-%d"'
+}
 
 # URL of your Home Assistant instance
 HOME_ASSISTANT_URL = "https://home.example.com"
 # Long-lived access token
 HOME_ASSISTANT_KEY = "ABCDEF"
 
-# Dict of Home Assistant entities to track the state of
+# This defines placeholders which are retrieved from a Home Assistant instance
+# Leave blank to disable entirely
+# These are refreshed according to WEB_REFRESH_INTERVAL
 # '<new placeholder name>' : '<home assistant entity>' 
-HOME_ASSISTANT_ENTITY_STATES = {
+HOME_ASSISTANT_STATE_PLACEHOLDERS = {
     'temp' : 'sensor.room_temperature',
     'phonebattery' : 'sensor.phone_battery_level'
 }
