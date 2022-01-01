@@ -98,6 +98,3 @@ RECTANGLES = [
     (1, 23, 32, 16, (200, 0, 200))
 ]
 
-# Place from a list of available symbols
-# 
-SYMBOLS = []
