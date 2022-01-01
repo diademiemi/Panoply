@@ -20,11 +20,12 @@ def local_data():
     allData["date"] = date.getDate()
     threading.Timer(config.LOCAL_REFRESH_INTERVAL, local_data).start()
 
+def getData():
+    return allData
 
 def getTime():
     return allData["time"]
 def getDate():
     return allData["date"]
-
 def getTemp():
     return allData["temp"]
