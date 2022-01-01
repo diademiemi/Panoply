@@ -130,4 +130,4 @@ dmypy.json
 
 
 # Config file
-headsup/config.py
+panoply/config.py
