@@ -3,13 +3,13 @@ import config
 import json
 from requests import get
 
-def getTemp():
+def getState(entity):
     headers = {
         "Authorization": "Bearer {key}".format(key = config.HOME_ASSISTANT_KEY),
         "content-type": "application/json",
     }
 
-    endpoint = "{url}/api/states/{entity}".format(url = config.HOME_ASSISTANT_URL, entity = config.HOME_ASSISTANT_TEMP_SENSOR)
+    endpoint = "{url}/api/states/{entity}".format(url = config.HOME_ASSISTANT_URL, entity = entity)
 
     response = get(endpoint, headers=headers)
 

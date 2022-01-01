@@ -15,9 +15,13 @@ DATE_FORMAT = "%Y-%m-%d"
 HOME_ASSISTANT_URL = "https://example.com"
 # Long-lived access token
 HOME_ASSISTANT_KEY = "ABCDEF"
-# Name of the temperature sensor for use in %temp%
-HOME_ASSISTANT_TEMP_SENSOR = "sensor.my_room_temperature"
 
+# Dict of Home Assistant entities to track the state of
+# '<new placeholder name>' : '<home assistant entity>' 
+HOME_ASSISTANT_ENTITY_STATES = {
+    'temp' : 'sensor.room_temperature',
+    'phonebattery' : 'sensor.phone_battery_level'
+}
 # Layout settings
 # Here you can customise the location and content of text elements or place shapes
 
@@ -27,21 +31,21 @@ HOME_ASSISTANT_TEMP_SENSOR = "sensor.my_room_temperature"
 # %temp% - Replaced with the temperature polled from Home Assistant
 
 # Large text, using the PixeloidMono font
-# (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
+# '<text %placeholder%>' : (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
 LARGE_TEXT_ELEMENTS = {
     '%time%' : (2, 9, (200, 200, 200)),
     '%temp%' : (2, 38, (200, 200, 200))
 }
 
 # Small text, using the 5x7 font
-# (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
+# '<text %placeholder%>' : (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
 SMALL_TEXT_ELEMENTS = {
     '%date%' : (2, 18, (200, 200, 200)),
     'it is' : (2, 30, (200, 200, 200))
 }
 
 # Tiny text, using the 4x6 font
-# (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
+# '<text %placeholder%>' : (<x position top-left>, <y position top-left>, (<red>, <green>, <blue>))
 TINY_TEXT_ELEMENTS = {
     'c' : (27, 38, (200, 200, 200)),
     'Hello, world!' : (2, 56, (200, 200, 200))

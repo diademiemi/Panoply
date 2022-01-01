@@ -11,7 +11,9 @@ def start():
     local_data()
     
 def web_data():
-    allData["temp"] = homeassistant.getTemp()
+    if config.HOME_ASSISTANT_ENTITY_STATES:
+        for key, value in config.HOME_ASSISTANT_ENTITY_STATES.items():
+            allData[key] = homeassistant.getState(value)
     threading.Timer(config.WEB_REFRESH_INTERVAL, web_data).start()
 
 
