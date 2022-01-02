@@ -10,9 +10,12 @@ import sys
 def test():
     try:
         print("Press CTRL+C to exit.")
-        while True:
-            offscreen_canvas = matrix.device.CreateFrameCanvas()
+        # Initialise a canvas
+        offscreen_canvas = matrix.device.CreateFrameCanvas()
 
+        while True:
+            # Clear the canvas for the new frame
+            offscreen_canvas.Clear()
             # Loop for every horizontal line in list
             for hline in config.HORIZONTAL_LINES:
                 color = renderer.getColorTuple(hline[3])
@@ -58,11 +61,12 @@ def test():
                     if "%{}%".format(dataname) in textresult:
                         textresult = textresult.replace("%{}%".format(dataname), dataresult)
                 color = renderer.getColorTuple(values[2])
-                # Add message to display
+                # Add message to displayt
                 offscreen_canvas = text.tinyFont(offscreen_canvas, values[0], values[1], color, textresult)
-
-            time.sleep(config.DISPLAY_REFRESH_RATE)
+            
             offscreen_canvas = matrix.device.SwapOnVSync(offscreen_canvas)
+            time.sleep(config.DISPLAY_REFRESH_RATE)
+
     except KeyboardInterrupt:
         print("Stopping...")
         sys.exit(0)
