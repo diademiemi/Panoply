@@ -122,8 +122,8 @@ RECTANGLES = [
 ```
 </p></details>
 
-For every text field, placeholders can be used. These placeholders can be defined earlier in the config at HOME_ASSISTANT_STATE_PLACEHOLDERS and COMMAND_PLACEHOLDERS. When you type the placeholder surrounded by percentage signs, these will be replaced with the last value retrieved from the command/entity configured.  
-There are also color placeholders which are retrieved from Home Assistant entities. These take the entity's `rgb_color` field and use them as the colour. These can be used by defining them in HOME_ASSISTANT_COLORS and then using the colors name instead of the colour tuple. 
+For every text field, placeholders can be used. These placeholders can be defined earlier in the config at `HOME_ASSISTANT_STATE_PLACEHOLDERS` and `COMMAND_PLACEHOLDERS`. When you type the placeholder surrounded by percentage signs, these will be replaced with the last value retrieved from the command/entity configured.  
+There are also color placeholders which are retrieved from Home Assistant entities. These take the entity's `rgb_color` field and use them as the colour. These can be used by defining them in `HOME_ASSISTANT_COLORS` and then using the colors name instead of the colour tuple.  
 
 ## Example / My Config
 
