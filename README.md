@@ -3,7 +3,11 @@
 Panoply is a Python program to drive an RGB Matrix display. This program comes with Home Assistant integration, which makes it a great display to view Home Assistant devices.  
 
 ## Usage
-To start the program, make sure you the [rgbmatrix](https://github.com/hzeller/rpi-rgb-led-matrix) library installed and your RGB matrix is connected. The default size is 64x64, you can configure the display in `config.py` (Copy this from `config_sample.py`). If you've got the display connected and configured, go into the `panoply` directory and simply run `python3 main.py`! To have it persist after your terminal closes, I recommend using `tmux` (`tmux new-session`).  
+1. Make sure you the [rgbmatrix](https://github.com/hzeller/rpi-rgb-led-matrix) library installed and your RGB matrix is connected.  
+2. Configure your display settings in `config.py` (Copy this from `config_sample.py`). The default size is 64x64, with no rotation.  
+3. If you've got the display connected and configured, go into the `panoply` directory and simply run `python3 main.py`!  
+4. If all works, you can configure the layout in `config.py` to your liking.  
+5. (Optional) To have it persist after your terminal closes, I recommend using `tmux` (`tmux new-session`).  
 
 ## Configuration
 
