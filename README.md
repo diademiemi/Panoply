@@ -130,7 +130,8 @@ There are also color placeholders which are retrieved from Home Assistant entiti
 <img src="https://raw.githubusercontent.com/diademiemi/Panoply/main/images/MyConfig.jpg" align="right" title="Static colour" width="256" height="256" />  
 
 In this image my configuration is shown. I have the time and date displayed at the top. The temperature is shown after being retrieved from Home Assistant.  
-Beneath that is a horizontal line which takes the colour of my LED strip (Which you can see in the reflection!), and below that are 6 icons representing my ceiling bulbs, these also take the colour they are set to. At the bottom there is text which says my phone's current battery level, and the entire panel is wrapped in a red square. Hopefully this gives an idea of the possibilities so far!  
+Beneath that is a horizontal line which takes the colour of my LED strip (Which you can see in the reflection!), and below that are 6 icons representing my ceiling bulbs, these also take the colour they are set to. In the picture there's one turned off, one at cool white, one at warm white and a red, blue and green bulb.  
+At the bottom there is text which says my phone's current battery level, and the entire panel is wrapped in a red square. Hopefully this gives an idea of the possibilities so far!  
 
 The configuration used for it is the following:
 
