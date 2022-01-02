@@ -250,4 +250,7 @@ This project uses fonts under the public domain and fonts licensed under the SIL
 
 <img src="https://raw.githubusercontent.com/diademiemi/Panoply/main/images/Setup.jpg" align="right" title="Static colour" width="270" height="150" />  
 
-This has been tested with a Raspberry Pi 4b with 4GB of RAM. The display I am using is a [JOY-iT 64x64 RGB-LED Matrix Module](https://www.elektor.com/joy-it-64x64-rgb-led-matrix-module) with an [Adafruit RGB Matrix HAT](https://www.adafruit.com/product/2345). The code is made to work with any display that supports the [rgbmatrix](https://github.com/hzeller/rpi-rgb-led-matrix) library though, although I doubt lower resolutions will be able to display much. The cause of the reflections in the images are because I covered the display with a plastic film to dim it so it can be kept on at night.  
+This has been tested with a Raspberry Pi 4b with 4GB of RAM. The display I am using is a [JOY-iT 64x64 RGB-LED Matrix Module](https://www.elektor.com/joy-it-64x64-rgb-led-matrix-module) with an [Adafruit RGB Matrix HAT](https://www.adafruit.com/product/2345). The code is made to work with any display that supports the [rgbmatrix](https://github.com/hzeller/rpi-rgb-led-matrix) library though, although I doubt lower resolutions will be able to display much.  
+The cause of the reflections in the images are because I covered the display with a plastic film to dim it so it can be kept on at night, not the display itself.  
+
+ The `rgbmatrix` library requires root unless configured otherwise, this is not a bug with this program!  
