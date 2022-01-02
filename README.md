@@ -124,8 +124,9 @@ There are also color placeholders which are retrieved from Home Assistant entiti
 ## Example / My Config
 
 <img src="https://raw.githubusercontent.com/diademiemi/Panoply/main/images/MyConfig.jpg" align="right" title="Static colour" width="256" height="256" />  
+
 In this image my configuration is shown. I have the time and date displayed at the top. The temperature is shown after being retrieved from Home Assistant.  
-Beneath that is a horizontal line which takes the colour of my LED strip (Which you can see in the reflection!), and below that are 6 icons representing my ceiling bulbs, these also take the colour they are set to. At the bottom there is text which says my phone's current battery level, and the entire panel is wrapped in a red square.  
+Beneath that is a horizontal line which takes the colour of my LED strip (Which you can see in the reflection!), and below that are 6 icons representing my ceiling bulbs, these also take the colour they are set to. At the bottom there is text which says my phone's current battery level, and the entire panel is wrapped in a red square. Hopefully this gives an idea of the possibilities so far!  
 
 The configuration used for it is the following:
 
@@ -242,5 +243,7 @@ RECTANGLES = [
 
 ## Notices
 This project uses fonts under the public domain and fonts licensed under the SIL Open Font License. For more information, check the [README.md](./fonts/README.md) in the `fonts` directory.  
+
+<img src="https://raw.githubusercontent.com/diademiemi/Panoply/main/images/Setup.jpg" align="right" title="Static colour" width="270" height="150" />  
 
 This has been tested with a Raspberry Pi 4b with 4GB of RAM. The display I am using is a [JOY-iT 64x64 RGB-LED Matrix Module](https://www.elektor.com/joy-it-64x64-rgb-led-matrix-module) with an [Adafruit RGB Matrix HAT](https://www.adafruit.com/product/2345). The code is made to work with any display that supports the [rgbmatrix](https://github.com/hzeller/rpi-rgb-led-matrix) library though, although I doubt lower resolutions will be able to display much. The cause of the reflections in the images are because I covered the display with a plastic film to dim it so it can be kept on at night.  
