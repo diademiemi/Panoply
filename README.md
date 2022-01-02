@@ -8,6 +8,7 @@ To start the program, make sure you the [rgbmatrix](https://github.com/hzeller/r
 ## Configuration
 
 <img src="https://raw.githubusercontent.com/diademiemi/Panoply/main/images/DefaultConfig.jpg" align="right" title="Static colour" width="256" height="256" />  
+
 The following is the default configuration for Panoply as of version 1.0, with every option commented with usage. Please place the configuration at `panoply/config.py` after configuring.  
 
 <details><summary>config_sample.py</summary><p>
@@ -242,4 +243,4 @@ RECTANGLES = [
 ## Notices
 This project uses fonts under the public domain and fonts licensed under the SIL Open Font License. For more information, check the [README.md](./fonts/README.md) in the `fonts` directory.  
 
-This has been tested with a Raspberry Pi 4b with 4GB of RAM. The display I am using is a [JOY-iT 64x64 RGB-LED Matrix Module](https://www.elektor.com/joy-it-64x64-rgb-led-matrix-module) with an [Adafruit RGB Matrix HAT](https://www.adafruit.com/product/2345). The code is made to work with any display that supports the [rgbmatrix](https://github.com/hzeller/rpi-rgb-led-matrix) library though, although I doubt lower resolutions will be able to display much. 
+This has been tested with a Raspberry Pi 4b with 4GB of RAM. The display I am using is a [JOY-iT 64x64 RGB-LED Matrix Module](https://www.elektor.com/joy-it-64x64-rgb-led-matrix-module) with an [Adafruit RGB Matrix HAT](https://www.adafruit.com/product/2345). The code is made to work with any display that supports the [rgbmatrix](https://github.com/hzeller/rpi-rgb-led-matrix) library though, although I doubt lower resolutions will be able to display much. The cause of the reflections in the images are because I covered the display with a plastic film to dim it so it can be kept on at night.  
