@@ -46,7 +46,7 @@ HOME_ASSISTANT_STATE_PLACEHOLDERS = {
 # Leave blank to disable entirely
 # These are refreshed according to WEB_REFRESH_INTERVAL
 # '<new color name>' : '<home assistant entity>' 
-HOME_ASSISTANT_COLOURS = {
+HOME_ASSISTANT_COLORS = {
     'bulbs' : 'light.bulbs'
 }
 

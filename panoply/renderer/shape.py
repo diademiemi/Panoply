@@ -2,7 +2,7 @@
 # x         - x starting coordinate
 # y         - y starting coordinate
 # len       - length of the line
-# color     - tuple of RGB colours
+# color     - tuple of RGB colors
 
 def verticalLine(canvas, x, y, len, color):
     # Draw pixel for every pixel in length
@@ -23,7 +23,7 @@ def horizontalLine(canvas, x, y, len, color):
 # y         - y starting coordinate
 # lenx      - rectangle width
 # leny      - rectangle height
-# color     - tuple of RGB colours
+# color     - tuple of RGB colors
 
 def rectangle(canvas, x, y, lenx, leny, color):
     # Top x line

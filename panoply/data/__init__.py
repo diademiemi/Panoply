@@ -14,8 +14,8 @@ def web_data():
     if config.HOME_ASSISTANT_STATE_PLACEHOLDERS:
         for key, value in config.HOME_ASSISTANT_STATE_PLACEHOLDERS.items():
             placeholders[key] = homeassistant.getState(value)
-    if config.HOME_ASSISTANT_COLOURS:
-        for key, value in config.HOME_ASSISTANT_COLOURS.items():
+    if config.HOME_ASSISTANT_COLORS:
+        for key, value in config.HOME_ASSISTANT_COLORS.items():
             colors[key] = homeassistant.getColor(value)
     threading.Timer(config.WEB_REFRESH_INTERVAL, web_data).start()
 

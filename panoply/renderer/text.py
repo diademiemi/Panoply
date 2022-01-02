@@ -5,7 +5,7 @@ from rgbmatrix import graphics
 # canvas    - canvas to modify
 # x         - x starting coordinate
 # y         - y starting coordinate
-# color     - tuple of RGB colours
+# color     - tuple of RGB colors
 # text      - text to display
 
 def largeFont(canvas, x, y, color, text):
