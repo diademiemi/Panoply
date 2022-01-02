@@ -3,7 +3,7 @@ Panoply is a Python program to drive an RGB Matrix display. This program comes w
 
 ## Examples
 
-<img src="https://raw.githubusercontent.com/diademiemi/Pi-RGB/main/images/MyConfig.jpg" align="right" title="Static colour" width="256" height="256" />  
+<img src="https://raw.githubusercontent.com/diademiemi/Panoply/main/images/MyConfig.jpg" align="right" title="Static colour" width="256" height="256" />  
 In this image my configuration is shown. I have the time and date displayed at the top. The temperature is shown after being retrieved from Home Assistant.  
 Beneath that is a horizontal line which takes the colour of my LED strip (Which you can see in the reflection!), and below that are 6 icons representing my ceiling bulbs, these also take the colour they are set to. At the bottom there is text which says my phone's current battery level, and the entire panel is wrapped in a red square.  
 
