@@ -53,11 +53,6 @@ HOME_ASSISTANT_COLORS = {
 # Layout settings
 # Here you can customise the location and content of text elements or place shapes
 
-# AVAILABLE TEXT PLACEHOLDERS:
-# %time% - Replaced with the current time
-# %date% - Replaced with the current date
-# And any entities defined from Home Assistant
-
 # Large text, using the PixeloidMono font
 # '<text %placeholder%>' : (<x position bottom-left>, <y position bottom-left>, (<red>, <green>, <blue>))
 LARGE_TEXT_ELEMENTS = {
