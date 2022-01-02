@@ -13,7 +13,7 @@ Panoply is a Python program to drive an RGB Matrix display. This program comes w
 
 <img src="https://raw.githubusercontent.com/diademiemi/Panoply/main/images/DefaultConfig.jpg" align="right" title="Static colour" width="256" height="256" />  
 
-The following is the default configuration for Panoply as of version 1.0, with every option commented with usage. Please place the configuration at `panoply/config.py` after configuring.  
+The following is the default configuration for Panoply, with every option commented with usage. Please place the configuration at `panoply/config.py` after configuring.  
 
 <details><summary>config_sample.py</summary><p>
 
