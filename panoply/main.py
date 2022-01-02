@@ -24,4 +24,3 @@ data.start()
 TDisplay = DisplayThread("DisplayThread")
 TDisplay.start()
 TDisplay.join()
-
