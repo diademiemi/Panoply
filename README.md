@@ -100,16 +100,11 @@ TINY_TEXT_ELEMENTS = {
     'Hello, world!' : (2, 56, 'bulbs') # Example of using colors retrieved from Home Assistant
 }
 
-# Place a horizontal line, starting from the left
-# (<x position top-left>, <y position top-left>, <length> (<red>, <green>, <blue>))
-HORIZONTAL_LINES = [
-    (0, 10, 64, (200, 0, 0)),
-]
-
-# Place a vertical line, starting from the top
-# (<x position top-left>, <y position top-left>, <length> (<red>, <green>, <blue>))
-VERTICAL_LINES = [
-    (53, 0, 64, (0, 0, 200))
+# Place a line going from x0, y0 to x1, y1
+# (<first x position>, <first y position>, <second x position>, <second y position) (<red>, <green>, <blue>))
+LINES = [
+    (0, 10, 64, 10, (200, 0, 0)),
+    (53, 0, 53, 64, (0, 0, 200))
 ]
 
 # Place a hollow rectangle
@@ -227,15 +222,10 @@ TINY_TEXT_ELEMENTS = {
     'Phone at %phonebattery%%' : (7, 62, (200, 200, 200))
 }
 
-# Place a horizontal line, starting from the left
-# (<x position top-left>, <y position top-left>, <length> (<red>, <green>, <blue>))
-HORIZONTAL_LINES = [
-    (16, 40, 31, 'led_01')
-]
-
-# Place a vertical line, starting from the top
-# (<x position top-left>, <y position top-left>, <length> (<red>, <green>, <blue>))
-VERTICAL_LINES = [
+# Place a line going from x0, y0 to x1, y1
+# (<first x position>, <first y position>, <second x position>, <second y position) (<red>, <green>, <blue>))
+LINES = [
+    (16, 40, 48, 40, 'led_01')
 ]
 
 # Place a hollow rectangle
