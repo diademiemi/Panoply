@@ -16,20 +16,16 @@ def test():
         while True:
             # Clear the canvas for the new frame
             offscreen_canvas.Clear()
-            # Loop for every horizontal line in list
-            for hline in config.HORIZONTAL_LINES:
-                color = renderer.getColorTuple(hline[3])
-                offscreen_canvas = shape.horizontalLine(offscreen_canvas, hline[0], hline[1], hline[2], color)
-
-            # Loop for every vertical line in list
-            for vline in config.VERTICAL_LINES:
-                color = renderer.getColorTuple(vline[3])
-                offscreen_canvas = shape.verticalLine(offscreen_canvas, vline[0], vline[1], vline[2], color)
 
             # Loop for every rectangle in list
             for rectangle in config.RECTANGLES:
                 color = renderer.getColorTuple(rectangle[4])
                 offscreen_canvas = shape.rectangle(offscreen_canvas, rectangle[0], rectangle[1], rectangle[2], rectangle[3], color)
+
+            # Loop for every line in list
+            for line in config.LINES:
+                color = renderer.getColorTuple(line[4])
+                offscreen_canvas = shape.line(offscreen_canvas, line[0], line[1], line[2], line[3], color)
 
             # Loop for every text in list
             for textentity, values in config.LARGE_TEXT_ELEMENTS.items():
