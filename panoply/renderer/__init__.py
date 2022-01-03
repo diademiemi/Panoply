@@ -1,4 +1,4 @@
-from renderer import text, shape
+from renderer import text, shape, rectangle
 import config
 import matrix
 import data
@@ -26,9 +26,9 @@ def start():
             offscreen_canvas.Clear()
 
             # Loop for every rectangle in list
-            for rectangle in config.RECTANGLES:
-                color = getColorTuple(rectangle[4])
-                offscreen_canvas = shape.rectangle(offscreen_canvas, rectangle[0], rectangle[1], rectangle[2], rectangle[3], color)
+            for rect in config.RECTANGLES:
+                color = getColorTuple(rect[4])
+                offscreen_canvas = rectangle.draw(offscreen_canvas, rect[0], rect[1], rect[2], rect[3], color)
 
             # Loop for every line in list
             for line in config.LINES:

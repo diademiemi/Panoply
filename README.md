@@ -108,11 +108,12 @@ LINES = [
 ]
 
 # Place a hollow rectangle
-# (<x position top-left>, <y position top-left>, <x length>, <y length> (<red>, <green>, <blue>))
+# (<first x position>, <first y position>, <second x position>, <second y position>, (<red>, <green>, <blue>))
 RECTANGLES = [
-    (0, 0, 64, 64, (0, 200, 0)),
-    (1, 23, 32, 16, (200, 0, 200))
+    (0, 0, 63, 63, (0, 200, 0)),
+    (1, 23, 32, 38, (200, 0, 200))
 ]
+
 
 ```
 </p></details>
@@ -223,16 +224,17 @@ TINY_TEXT_ELEMENTS = {
 }
 
 # Place a line going from x0, y0 to x1, y1
-# (<first x position>, <first y position>, <second x position>, <second y position) (<red>, <green>, <blue>))
+# (<first x position>, <first y position>, <second x position>, <second y position>, (<red>, <green>, <blue>))
 LINES = [
     (16, 40, 48, 40, 'led_01')
 ]
 
 # Place a hollow rectangle
-# (<x position top-left>, <y position top-left>, <x length>, <y length> (<red>, <green>, <blue>))
+# (<first x position>, <first y position>, <second x position>, <second y position>, (<red>, <green>, <blue>))
 RECTANGLES = [
-    (0, 0, 64, 64, (64, 0, 0))
+    (0, 0, 63, 63, (64, 0, 0))
 ]
+
 ```
 </p></details>
 
