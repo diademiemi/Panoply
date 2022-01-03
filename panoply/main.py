@@ -3,8 +3,6 @@ import data
 import renderer
 import threading
 
-global t
-
 matrix.init()
 
 # Create a class for the display thread
