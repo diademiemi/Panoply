@@ -1,11 +1,9 @@
 import matrix
 import data
-from renderer import display
+import renderer
 import threading
 
 global t
-
-t = threading.Condition()
 
 matrix.init()
 
@@ -15,9 +13,9 @@ class DisplayThread(threading.Thread):
         threading.Thread.__init__(self)
         self.name = name
     def run(self):
-        display.test()
+        renderer.start()
 
-# Collect data, once these have ran it will be scheduled periodically
+# Collect data, once these have ran it will be scheduled periodically in a separate thread
 data.start()
 
 # Launch display in a separate thread
