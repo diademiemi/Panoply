@@ -1,3 +1,5 @@
+<img src="images/PanoplyLogo.png" align="right" alt="Logo" title="Logo" width="240" height="240" />
+
 # Panoply
 
 Panoply is a Python program to drive an RGB Matrix display. This program comes with Home Assistant integration, which makes it a great display to view Home Assistant devices.  
