@@ -12,6 +12,9 @@ def getColorTuple(color):
     else:
         tuple = color
     
+    # Apply dimming
+    if time.strftime("%H:%M") >= config.DIM_START_TIME or time.strftime("%H:%M") <= config.DIM_STOP_TIME:
+        return(tuple[0] * config.DIM_MODIFIER, tuple[1] * config.DIM_MODIFIER, tuple[2] * config.DIM_MODIFIER)
     return tuple
 
 

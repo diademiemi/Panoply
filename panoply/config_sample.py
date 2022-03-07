@@ -18,6 +18,15 @@ TINY_FONT = "../fonts/Tiny-4x6.bdf"
 SMALL_FONT = "../fonts/Small-5x7.bdf"
 LARGE_FONT = "../fonts/PixeloidMono.bdf"
 
+# Time when to dim the display
+# BE SURE TO ZERO-FILL THE TIMES (06:00, NOT 6:00)
+DIM_START_TIME = "20:00"
+# Time when to stop dimming the display
+DIM_STOP_TIME = "06:00"
+# How much the display should be dimmer as a multiplier of the usual brightness. 
+# Set to 1 to disable dimming
+DIM_MODIFIER = 1
+
 # This defines placeholders which are retrieved from shell commands
 # These are refreshed according to LOCAL_REFRESH_INTERVAL
 # '<new placeholder name>' : '<shell command>'
