@@ -16,6 +16,8 @@ def getState(entity):
     if response.status_code == 200:
         data = json.loads(response.content.decode('utf-8'))
         return data["state"]
+    else:
+        return "ERROR"
         
 def getColor(entity):
     headers = {
@@ -33,3 +35,5 @@ def getColor(entity):
             return data["attributes"]["rgb_color"]
         else:
             return (0, 0, 0)
+    else:
+        return (0, 0, 0)
